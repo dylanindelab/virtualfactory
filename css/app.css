@@ -46,7 +46,7 @@ body {
 .setting {
     width: 100%;
     height: 200px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .pattern {
@@ -55,12 +55,17 @@ body {
 
 .screen_patern {
     height: 500px;
-    background-color: blue;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
 }
 
 .setting_patern {
     height: 500px;
-    background-color: rgb(199, 172, 21);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: rgb(204, 203, 203);
 }
 
 
@@ -69,5 +74,45 @@ body {
     height: 35px;
     margin-top: 5px;
 }
+
+
+.square_size {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.triangle_size {
+    display: none;
+}
+
+.circle_size {
+    display: none;
+}
+
+.other_size {
+   display: none;
+}
+
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+
+.upper-canvas .drawing_pad {
+    width: 500px;
+    height: 500px;
+}
+
+#myCanvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.canvas-container {
+    width: 500px;
+    height: 500px;
+}
+
+
 
 

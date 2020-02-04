@@ -9,19 +9,18 @@
 <body>
 
 <header>
-<div class="first_title">
-    <p style="display:flex; justify-content:center; text-decoration: underline; font-size:20px;">Établi version 0.1</p>
-</div>
-
+    <div class="first_title">
+        <p style="display:flex; justify-content:center; text-decoration: underline; font-size:20px;">Établi version 0.1</p>
+    </div>
 </header>
 
 
 <div class="first_select">
     <div class="container">
-    <h2> - Choix de la géométrie de base - </h2>
+      <h2> - Choix de la géométrie de base - </h2>
     <div class="item_select row">
         <div class="col-lg-3 col-12 item_square">
-            <button class="button"><i class="fas fa-square"></i></button>
+            <button class="button" id="square_button"><i class="fas fa-square"></i></button>
         </div>
 
         <div class="col-lg-3 col-12 item_triangle">
@@ -37,24 +36,65 @@
         </div>
     </div>
     </div>
-<div>
+</div>
+
+<div class="screen_settings">
 
 
-<div class="set_size">
+<div class="set_size square_size" id="square_size">
+    <div class="container">
+        <div class="row">
+            <p class="text-center"> - Paramètres de votre géometrie choisis - </p>
+            <div class="setting">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Largeur</label>
+                        <input type="number" class="form-control" id="largeurinput" aria-describedby="emailHelp" placeholder="Largeur de votre carré">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Hauteur</label>
+                        <input type="number" class="form-control" id="hauteurinput" placeholder="Hauteur de votre carré">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="validate">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="set_size triangle_size">
     <div class="container">
         <div class="row">
             <p class="text-center"> - Paramètres de votre choix - </p>
-            <div class="setting">settings bloc</div>
+            <div class="setting">Bloc de paramètres</div>
         </div>
-
     </div>
 </div>
+<div class="set_size circle_size">
+    <div class="container">
+        <div class="row">
+            <p class="text-center"> - Paramètres de votre choix - </p>
+            <div class="setting">Bloc de paramètres</div>
+        </div>
+    </div>
+</div>
+<div class="set_size other_size">
+    <div class="container">
+        <div class="row">
+            <p class="text-center"> - Paramètres de votre choix - </p>
+            <div class="setting">Bloc de paramètres</div>
+        </div>
+    </div>
+</div>
+
+
 
 <div class="pattern">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-12 screen_patern">Screen pattern</div>
-            <div class="col-lg-4 col-12 setting_patern">Settings pattern</div>
+            <div class="col-lg-8 col-12 screen_patern">
+            <canvas class="drawing_pad" style="width: 100%; height: 100%;" id="myCanvas"></canvas>
+            </div>
+            <div class="col-lg-4 col-12 setting_patern"></div>
         </div>
     </div>
 </div>
@@ -78,6 +118,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/3b619f6117.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href='css/app.css'>
+<script src='js/fabric.min.js'></script>
+<script src='js/canvastosvg.js'></script>
+<script src="js/app.js"></script>
+
 
 </body>
 </html>
