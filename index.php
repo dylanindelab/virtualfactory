@@ -44,15 +44,15 @@
 <div class="set_size square_size" id="square_size">
     <div class="container">
         <div class="row">
-            <p class="text-center"> - Paramètres de votre géometrie choisis - </p>
+            <p class="text-center"> - Paramètres de votre géometrie choisis - <br><br><small>Attention : Pour une découpe préciseTout vos paramètres doivent être en milimètre</p>
             <div class="setting">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Largeur</label>
+                        <label for="exampleInputEmail1">Largeur<small> en milimètres</small></label>
                         <input type="number" class="form-control" id="largeurinput" aria-describedby="emailHelp" placeholder="Largeur de votre carré">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Hauteur</label>
+                        <label for="exampleInputPassword1">Hauteur<small> en milimètres</small></label>
                         <input type="number" class="form-control" id="hauteurinput" placeholder="Hauteur de votre carré">
                     </div>
                     <button type="button" class="btn btn-primary" id="validate">Valider</button>
