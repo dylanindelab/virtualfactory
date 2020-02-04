@@ -25,11 +25,12 @@ $("#validate").click(function(){ // Lorsque l'on clique sur le bouton avec l'id 
     left: 320, // La position initial gauche de la géometrie afficher sur l'écran
     top: 250, // La position initial haut de la géometrie affichier sur l'écran
     fill: 'red', // La couleur de la géometrie
-    width: lrginput,   // La largeur qui correspond a ce que a entrer le client dans sont champs input
-    height: htrinput, // La hauteur qui correspond a ce que a entrer le client dans sont champs input
+    width: 25,   // La largeur qui correspond a ce que a entrer le client dans sont champs input
+    height: 25, // La hauteur qui correspond a ce que a entrer le client dans sont champs input
   });
   
   canvas.add(rect); // Et à ce moment la le canvas créer et ajoute le rect(rectangle ou carré en fonction de l - h que a entrer le client dans les parametre)
+  alert('Vos dimensions: Largeur : ' + lrginput + ' mm, Hauteur : ' + htrinput + ' mm.');
 })
 
 
