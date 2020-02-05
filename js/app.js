@@ -1,23 +1,18 @@
-// Dès que le document est charger les fonction peuvent être utiliser
+
 jQuery(document).ready(function($) {
-    console.log('Le document est prêt') // Affice dans la console la phrase le document est prêt des que le document est prêt.
+    console.log('Document is ready') // Affice dans la console la phrase le document est prêt des que le document est prêt.
 
     $( "#square_button" ).click(function() { // Dès que l'on clique sur le bouton carré les paramètres de celui ci apparaisent.
         $('.square_size').toggleClass('show'); // On rajoute une class a notre class pour pouvoir la masquer ou l'ajouter.
         // Cette fonctionnalité sera a copier pour chaque bloc de code en fonction de chaque géometrie de base choisis.
       });
 
-
-
-
-// create a rectangle with angle of 45 degrees
-
-var canvas = new fabric.Canvas('myCanvas'); // Je fabrique un nouveau canvas grâce a ma balise canvas prévu dans mon html
+let canvas = new fabric.Canvas('myCanvas'); // Je fabrique un nouveau canvas grâce a ma balise canvas prévu dans mon html
 canvas.setDimensions({width:640, height:500}); // Je prévois des dimension par defaut a mon cavnas
 
 $("#validate").click(function(){ // Lorsque l'on clique sur le bouton avec l'id  #valide dans le html
-  let htrinput = $("#hauteurinput").val(); // On récupere la valeur taper dans le input hauteur
-  let lrginput = $("#largeurinput").val(); // On récupere la valeur taper dans le input largeur
+  let htrinput = $("#hauteurinput").val(); // On récupere la valeur taper dans le input hauteur. Brut en milimetre et non relatif (ce qui et afficher a l'écran)
+  let lrginput = $("#largeurinput").val(); // On récupere la valeur taper dans le input largeur. Brut en milimetre et non relatif (ce qui et afficher a l'écran)
   // alert(htrinput + " " + lrginput); // J'affiche une alert avec la hauteur taper et la largeur taper a son tour
   
 
@@ -30,15 +25,23 @@ $("#validate").click(function(){ // Lorsque l'on clique sur le bouton avec l'id 
   });
   
   canvas.add(rect); // Et à ce moment la le canvas créer et ajoute le rect(rectangle ou carré en fonction de l - h que a entrer le client dans les parametre)
-  alert('Vos dimensions: Largeur : ' + lrginput + ' mm, Hauteur : ' + htrinput + ' mm.');
+  // alert('Vos dimensions: Largeur : ' + lrginput + ' mm, Hauteur : ' + htrinput + ' mm.');
+  localStorage.setItem("largeur", lrginput); // Stocke en données local chez le client la largeur entré par l'utilisateur.
+  localStorage.setItem("hauteur", htrinput); // Stocke en données local chez le client la hauteur entré par l'utilisateur.
+
+  let cookielargeur = localStorage.getItem("largeur");
+  let cookiehauteur = localStorage.getItem("hauteur");
+
+  let largeursetting = document.getElementById("lrg_setting");
+  let hauteursetting = document.getElementById("htr_setting")
+ $(largeursetting).html("Largeur de votre géometrie: " + cookielargeur + 'mm');
+ $(hauteursetting).html("Hauteur de votre géometrie: " + cookiehauteur + 'mm');
+
+  // console.log(cookiehauteur, cookielargeur);
+
 })
 
 
-canvas.toSVG(); // Pour convertir le canvas en svg 
-
-
-
-  
 })
 
 
