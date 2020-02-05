@@ -61,7 +61,7 @@
                         <label for="exampleInputPassword1">Hauteur<small> en milimètres</small></label>
                         <input type="number" class="form-control" id="hauteurinput" placeholder="Hauteur de votre carré">
                     </div>
-                    <button type="button" class="btn btn-primary" id="validate">Valider</button>
+                    <button type="button" class="btn btn-primary" id="validate_square">Valider</button>
                 </form>
             </div>
         </div>

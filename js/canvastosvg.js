@@ -186,6 +186,8 @@
         this.__ctx = ctx;
     };
 
+
+
     /**
      * Adds a color stop to the gradient root
      */
@@ -533,6 +535,9 @@
         var degrees = (angle * 180 / Math.PI);
         this.__addTransform(format("rotate({angle},{cx},{cy})", {angle:degrees, cx:0, cy:0}));
     };
+
+
+
 
     /**
      * translates the current element
@@ -1212,5 +1217,8 @@
     if (typeof module === "object" && typeof module.exports === "object") {
         module.exports = ctx;
     }
+
+
+    
 
 }());
