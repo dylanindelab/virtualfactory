@@ -1,10 +1,11 @@
 
 jQuery(document).ready(function($) {
-    alert('Attention toutes données rentrer dans les champs sont suceptible d\'être enregistré pour vos futur utilisation. ');
+
     console.log('Document is ready') // Affice dans la console la phrase le document est prêt des que le document est prêt.
 
     $( "#square_button" ).click(function() { // Dès que l'on clique sur le bouton carré les paramètres de celui ci apparaisent.
         $('.square_size').toggleClass('show'); // On rajoute une class a notre class pour pouvoir la masquer ou l'ajouter.
+        alert('Attention toutes données rentrer dans les champs sont suceptible d\'être enregistré pour vos futur utilisation. ');
         // Cette fonctionnalité sera a copier pour chaque bloc de code en fonction de chaque géometrie de base choisis.
       });
 
@@ -25,7 +26,7 @@ $("#validate_square").click(function(){ // Lorsque l'on clique sur le bouton ave
     height: 25, // La hauteur qui correspond a ce que a entrer le client dans sont champs input
   });
   
-  canvas.add(rect); // Et à ce moment la le canvas créer et ajoute le rect(rectangle ou carré en fonction de l - h que a entrer le client dans les parametre)
+  canvas.add(rect); // Et à ce moment est la le canvas créer et ajoute le rect(rectangle ou carré en fonction de l - h que a entrer le client dans les parametre)
   // alert('Vos dimensions: Largeur : ' + lrginput + ' mm, Hauteur : ' + htrinput + ' mm.');
   localStorage.setItem("largeur", lrginput); // Stocke en données local chez le client la largeur entré par l'utilisateur.
   localStorage.setItem("hauteur", htrinput); // Stocke en données local chez le client la hauteur entré par l'utilisateur.
@@ -36,18 +37,20 @@ $("#validate_square").click(function(){ // Lorsque l'on clique sur le bouton ave
   let largeursetting = document.getElementById("lrg_setting"); // Récupere le champs lrg_setting dans mon html
   let hauteursetting = document.getElementById("htr_setting"); // Récupere le champs htr_setting dans mon html
 
-  $(largeursetting).html("Largeur de votre géometrie: " + cookielargeur + 'mm'); // Ajoute dans mon html les données stocké en local
-  $(hauteursetting).html("Hauteur de votre géometrie: " + cookiehauteur + 'mm'); // Ajoute dans mon html les données stocké en local
+  $(largeursetting).html("Largeur de votre géometrie: " + cookielargeur + 'mm'); // Ajoute dans mon html les données stocké en local.
+  $(hauteursetting).html("Hauteur de votre géometrie: " + cookiehauteur + 'mm'); // Ajoute dans mon html les données stocké en local.
 
-  
+  if(cookielargeur <= 0 || cookiehauteur <=0) {
+    alert('Désolé mais vos paramètre ne respectent pas les dimension minimum');
+  }
+})
 
-
-
-
+// Je vais devoir probablement arriver à la fin du scope de ma fonction et devoir en sortir afin de créer une nouvelle fonction global pour me permettre de pouvoir créer de nouvelles choses comme le triangle et cercle.
 })
 
 
-})
+
+
 
 
 

@@ -65,12 +65,16 @@
         return mapping[textAlign] || mapping.start;
     }
 
+
+
     //helper function to map canvas-textBaseline to svg-dominantBaseline
     function getDominantBaseline(textBaseline) {
         //INFO: not supported in all browsers
         var mapping = {"alphabetic": "alphabetic", "hanging": "hanging", "top":"text-before-edge", "bottom":"text-after-edge", "middle":"central"};
         return mapping[textBaseline] || mapping.alphabetic;
     }
+
+
 
     // Unpack entities lookup where the numbers are in radix 32 to reduce the size
     // entity mapping courtesy of tinymce
@@ -175,6 +179,8 @@
             apply : "stroke"
         }
     };
+
+    
 
     /**
      *
@@ -1218,7 +1224,5 @@
         module.exports = ctx;
     }
 
-
-    
-
+     
 }());
