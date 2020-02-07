@@ -5,6 +5,10 @@
 <script src="https://kit.fontawesome.com/3b619f6117.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href='css/app.css'>
 <script src='js/fabric.min.js'></script>
+
+<script src="https://cdn.jsdelivr.net/npm/makerjs@0/target/js/browser.maker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bezier-js@2/bezier.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/opentype.js@0/dist/opentype.js"></script>
 <script src='js/canvastosvg.js'></script>
 <script src="js/app.js"></script>
 

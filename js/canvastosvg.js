@@ -863,6 +863,9 @@
             this.__clearCanvas();
             return;
         }
+
+
+
         var rect, parent = this.__closestGroupOrSvg();
         rect = this.__createElement("rect", {
             x : x,
@@ -873,11 +876,12 @@
         }, true);
         parent.appendChild(rect);
     };
-
+    
     /**
      * Adds a linear gradient to a defs tag.
      * Returns a canvas gradient object that has a reference to it's parent def
      */
+
     ctx.prototype.createLinearGradient = function (x1, y1, x2, y2) {
         var grad = this.__createElement("linearGradient", {
             id : randomString(this.__ids),
@@ -891,10 +895,13 @@
         return new CanvasGradient(grad, this);
     };
 
+
     /**
      * Adds a radial gradient to a defs tag.
      * Returns a canvas gradient object that has a reference to it's parent def
      */
+
+    
     ctx.prototype.createRadialGradient = function (x0, y0, r0, x1, y1, r1) {
         var grad = this.__createElement("radialGradient", {
             id : randomString(this.__ids),
@@ -914,6 +921,8 @@
      * Parses the font string and returns svg mapping
      * @private
      */
+
+
     ctx.prototype.__parseFont = function () {
         var regex = /^\s*(?=(?:(?:[-a-z]+\s*){0,2}(italic|oblique))?)(?=(?:(?:[-a-z]+\s*){0,2}(small-caps))?)(?=(?:(?:[-a-z]+\s*){0,2}(bold(?:er)?|lighter|[1-9]00))?)(?:(?:normal|\1|\2|\3)\s*){0,3}((?:xx?-)?(?:small|large)|medium|smaller|larger|[.\d]+(?:\%|in|[cem]m|ex|p[ctx]))(?:\s*\/\s*(normal|[.\d]+(?:\%|in|[cem]m|ex|p[ctx])))?\s*([-,\'\"\sa-z0-9]+?)\s*$/i;
         var fontPart = regex.exec( this.font );
@@ -938,7 +947,6 @@
 
         return data;
     };
-
     /**
      * Helper to link text fragments
      * @param font
@@ -946,6 +954,8 @@
      * @return {*}
      * @private
      */
+
+
     ctx.prototype.__wrapTextLink = function (font, element) {
         if (font.href) {
             var a = this.__createElement("a");
@@ -1175,6 +1185,8 @@
     /**
      * Generates a pattern tag
      */
+
+
     ctx.prototype.createPattern = function (image, repetition) {
         var pattern = this.__document.createElementNS("http://www.w3.org/2000/svg", "pattern"), id = randomString(this.__ids),
             img;
@@ -1204,25 +1216,27 @@
         }
     };
 
-    /**
-     * Not yet implemented
-     */
+
     ctx.prototype.drawFocusRing = function () {};
     ctx.prototype.createImageData = function () {};
     ctx.prototype.getImageData = function () {};
     ctx.prototype.putImageData = function () {};
     ctx.prototype.globalCompositeOperation = function () {};
     ctx.prototype.setTransform = function () {};
+    ctx.prototype.setWidth = function () {};
+
+
 
     //add options for alternative namespace
     if (typeof window === "object") {
         window.C2S = ctx;
     }
 
-    // CommonJS/Browserify
+    //Export to an SVG Files / Or Create a DXF Files 
     if (typeof module === "object" && typeof module.exports === "object") {
         module.exports = ctx;
-    }
-
-     
-}());
+        
+        }
+    }(
+    // Contribution for export as DXF Files as been created by Bourbotte Dylan - French Web Devloper.   
+));
