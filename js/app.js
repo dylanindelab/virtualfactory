@@ -33,24 +33,7 @@ $("#validate_square").click(function(){ // Lorsque l'on clique sur le bouton ave
 
   canvas.add(rect);
 
-  canvas.on("object:modified", function (e) {
-    var activeObject = e.target;
-        if (!activeObject) {
-            return;
-    }
-    var newWidth = activeObject.width * activeObject.scaleX ;
-    var newHeight = activeObject.height * activeObject.scaleY ;
 
-    activeObject.width = newWidth;
-    activeObject.height = newHeight;
-
-    activeObject.scaleX = 1;
-    activeObject.scaleY = 1;  
-
-    // refler le soucis de réglage de hauteur.     
-    
-    console.log(newWidth);
-});
 
   let newsize = rect.getScaledWidth();
   console.log(newsize);
@@ -73,6 +56,25 @@ $("#validate_square").click(function(){ // Lorsque l'on clique sur le bouton ave
 
   $(largeursetting).html("Largeur de votre géometrie: " + cookielargeur + 'mm'); // Ajoute dans mon html les données stocké en local.
   $(hauteursetting).html("Hauteur de votre géometrie: " + cookiehauteur + 'mm'); // Ajoute dans mon html les données stocké en local.
+
+  canvas.on("object:modified", function (e) {
+    var activeObject = e.target;
+        if (!activeObject) {
+            return;
+    }
+    var newWidth = activeObject.width * activeObject.scaleX ;
+    var newHeight = activeObject.height * activeObject.scaleY ;
+
+    activeObject.width = newWidth;
+    activeObject.height = newHeight;
+
+    activeObject.scaleX = 1;  
+    activeObject.scaleY = 1;  
+
+    // refler le soucis de réglage de hauteur.     
+    
+    console.log(newWidth * cookielargeur / 40);
+});
     }
   })
 }) // End of document.ready (JQuery)

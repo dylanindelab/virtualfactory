@@ -107,11 +107,11 @@ body {
     width: 100% !important;
     height: 100% !important;
 }
-
+/* 
 .canvas-container {
     width: 500px;
     height: 500px;
-}
+} */
 
 .small_warning {
     display: flex;

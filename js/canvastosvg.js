@@ -1238,5 +1238,5 @@
         
         }
     }(
-    // Contribution for export as DXF Files as been created by Bourbotte Dylan - French Web Devloper.   
+    // Contribution for export as DXF Files as been created by Bourbotte Dylan 
 ));
