@@ -51,11 +51,8 @@ $("#validate_square").click(function(){ // Lorsque l'on clique sur le bouton ave
 
    // Récupere le champs htr_setting dans mon html
 
-  let largeursetting = document.getElementById("#lrg_setting");
-  let hauteursetting = document.getElementById("#htr_setting");
-
-  $(largeursetting).html("Largeur de votre géometrie: " + cookielargeur + 'mm'); // Ajoute dans mon html les données stocké en local.
-  $(hauteursetting).html("Hauteur de votre géometrie: " + cookiehauteur + 'mm'); // Ajoute dans mon html les données stocké en local.
+  let largeursetting = document.getElementById("lrg_setting");
+  let hauteursetting = document.getElementById("htr_setting");
 
   canvas.on("object:modified", function (e) {
     var activeObject = e.target;
@@ -73,7 +70,13 @@ $("#validate_square").click(function(){ // Lorsque l'on clique sur le bouton ave
 
     // refler le soucis de réglage de hauteur.     
     
-    console.log(newWidth * cookielargeur / 40);
+    console.log(newWidth * cookielargeur / 40); // Console.log de mon calcule pour la conversion milimètres
+
+  let largeurenmm = newWidth * cookielargeur / 40;
+  let hauteurenmm = newHeight * cookiehauteur / 40;
+  
+  $(largeursetting).html("Largeur de votre géometrie: " + largeurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
+  $(hauteursetting).html("Hauteur de votre géometrie: " + hauteurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
 });
     }
   })
