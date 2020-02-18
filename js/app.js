@@ -72,8 +72,8 @@ $("#validate_square").click(function(){ // Lorsque l'on clique sur le bouton ave
     
     console.log(newWidth * cookielargeur / 40); // Console.log de mon calcule pour la conversion milimètres
 
-  let largeurenmm = newWidth * cookielargeur / 40;
-  let hauteurenmm = newHeight * cookiehauteur / 40;
+  let largeurenmm = parseFloat(newWidth * cookielargeur / 40).toPrecision(6);
+  let hauteurenmm = parseFloat(newHeight * cookiehauteur / 40).toPrecision(6);
   
   $(largeursetting).html("Largeur de votre géometrie: " + largeurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
   $(hauteursetting).html("Hauteur de votre géometrie: " + hauteurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
