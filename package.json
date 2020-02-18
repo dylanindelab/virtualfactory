@@ -1,0 +1,22 @@
+{
+  "name": "virtualfactory",
+  "version": "1.0.0",
+  "description": "Branche de développement  \r  05-02-2020 8:43 - Ajout du stockage de données en milimètres et la création des formes géométrique.  \r  10-02-2020 15h00 - Ajout du calcul de conversion PX -> Mm",
+  "main": "savecode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanindelab/virtualfactory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanindelab/virtualfactory/issues"
+  },
+  "homepage": "https://github.com/dylanindelab/virtualfactory#readme",
+  "dependencies": {
+    "svg-blueprint": "^1.0.1"
+  }
+}
