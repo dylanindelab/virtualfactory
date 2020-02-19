@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dylanindelab/virtualfactory#readme",
   "dependencies": {
+    "sass": "^1.25.0",
     "svg-blueprint": "^1.0.1"
   }
 }

@@ -10,9 +10,6 @@
 </head>
 <body>
 
-
-<div id="ohsnap"></div>
-
 <header>
     <div class="first_title">
         <p style="display:flex; justify-content:center; text-decoration: underline; font-size:20px;">Établi version 0.1 </p>
@@ -134,7 +131,7 @@
     <script>
       // create the blueprint
       let blueprint = new svgBlueprint.Blueprint({ parentSelector: "main" });
-      blueprint.setDimensions({width:900, height:500});
+    //   blueprint.setDimensions({width:900, height:500});
       // add simple shape
       blueprint.append("rect", { x: -40, y: -40, width: 100, height: 80 });
      

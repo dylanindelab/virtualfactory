@@ -8,7 +8,7 @@
 
 <!-- My own files -->
 <script src="js/app.js"></script>
-<link rel="stylesheet" href='css/app.css'>
+<link rel="stylesheet" href='css/app.min.css'>
 <!-- End of my own files -->
 
 

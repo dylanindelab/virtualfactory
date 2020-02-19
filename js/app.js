@@ -1,7 +1,7 @@
 
 jQuery(document).ready(function($) {
     console.log('Document is ready') // Affice dans la console la phrase le document est prêt des que le document est prêt.
-    const sbp = require("svg-blueprint");
+
 
 
     $( "#square_button" ).click(function() { // Dès que l'on clique sur le bouton carré les paramètres de celui ci apparaisent.
