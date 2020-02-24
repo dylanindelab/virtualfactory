@@ -100,7 +100,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-12 screen_patern">
-            <canvas class="drawing_pad" style="width: 100%; height: 100%;" id="myCanvas"></canvas>
+            <main  class="drawing_pad" id="myCanvas"></main> 
             </div>
             <div class="col-lg-4 col-12 setting_patern">
                 <p class="setting_intime">Paramètres actuel</p>

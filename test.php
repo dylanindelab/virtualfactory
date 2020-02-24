@@ -127,17 +127,7 @@
 <footer>
     <div class="text-center" style="display: flex; justify-content:center;"><small>Vos données seront stocké temporairement afin de ne pas perdre votre travail.</small></div>
 </footer>
-<script src="https://unpkg.com/svg-blueprint"></script>
-    <script>
-      // create the blueprint
-      let blueprint = new svgBlueprint.Blueprint({ parentSelector: "main" });
-    //   blueprint.setDimensions({width:900, height:500});
-      // add simple shape
-      blueprint.append("rect", { x: -40, y: -40, width: 100, height: 80 });
-     
-      // fit to view
-      blueprint.fit();
-    </script>
+
 
 <?php
 include('includes/footer.php');

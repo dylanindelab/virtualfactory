@@ -1,6 +1,18 @@
 
 jQuery(document).ready(function($) {
+    var makerjs = require('makerjs'); // On demande a notre document JS d'inclure le fichier makerjs
     console.log('Document is ready') // Affice dans la console la phrase le document est prêt des que le document est prêt.
+    
+    
+    // create the blueprint
+    let blueprint = new svgBlueprint.Blueprint({ 
+      parentSelector: "main",
+      width: '100%',
+      height: '100%'
+      });
+
+    blueprint.fit();
+    // End of blue print in etabli.php
 
 
 
@@ -60,9 +72,9 @@ let hauteurenmm = parseFloat(newHeight * cookiehauteur / 40).toPrecision(6);
 $(largeursetting).html("Largeur de votre géometrie: " + largeurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
 $(hauteursetting).html("Hauteur de votre géometrie: " + hauteurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
 });
+
     }
   })
-
 
 
 }) // End of document.ready (JQuery)
