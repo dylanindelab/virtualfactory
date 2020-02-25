@@ -8,13 +8,19 @@
 <body>
     
 <div class='container'>
-<div class="icons">
-  
+
+<div class="icons"> 
   <a class="icon -menu">
     <span></span>
     <span></span>
     <span></span>
   </a>  
+</div>
+
+<div class="first_choise_pattern">
+    <div class="col-12 select_shape">
+
+    </div>
 </div>
 <div class="general_pattern">
     <div class="row">
