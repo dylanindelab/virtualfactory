@@ -39,8 +39,22 @@
 <div class="setting_pattern">
 
     <div class="row">
-        <div class="col-lg-12 text-center">
-            
+        <div class="col-lg-12">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Largeur :</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Votre largeur doit être au minimum de 40mm.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Hauteur :</label>
+                    <input type="number" class="form-control" id="exampleInputPassword1">
+                    <small id="emailHelp" class="form-text text-muted">Votre hauteur doit être au minimum de 40mm.</small>
+                </div>
+  
+                <button type="submit" class="btn btn-primary">Valider</button>
+            </form>
         </div>
     </div>
 </div>
