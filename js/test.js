@@ -1,5 +1,12 @@
 jQuery(document).ready(function($) {
 
+  let blueprint = new svgBlueprint.Blueprint({ 
+    parentSelector: ".draw_pattern",
+    width: '100%',
+    height: '100%'
+    });
+
+
     $('.icon').on('click', function() {
         $(this).toggleClass('active');
         $('.select_shape').toggleClass('active');
