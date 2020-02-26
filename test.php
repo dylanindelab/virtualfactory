@@ -63,7 +63,9 @@
 <div class="general_pattern">
     <div class="row">
             <div class="col-lg-8 col-12">
-                <div class="draw_pattern"></div>
+                <canvas id='myCanvas' class="draw_pattern">
+                    <div></div>
+                </canvas>
             </div>
             <div class="col-lg-4 col-12">
                 <div class="set_pattern"></div>
