@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<div class='container'>
+<div class="container">
 
 <div class="icons"> 
   <a class="icon -menu">
@@ -19,9 +19,33 @@
 
 <div class="first_choise_pattern">
     <div class="col-12 select_shape">
-
+        <div class="row">
+        <div class="col-3 shape">
+            <img class="img_fluid square_shape" src='img/square.svg'>
+        </div>
+        <div class="col-3 shape">
+            <img class="img_fluid circle_shape" src='img/circle.svg'>
+        </div>
+        <div class="col-3 shape">
+            <img class="img_fluid triangle_shape" src='img/triangle.svg'>
+        </div>
+        <div class="col-3 shape">
+            <img class="img_fluid draw_shape" src='img/draw.svg'>
+        </div>
+        </div>
     </div>
 </div>
+
+<div class="setting_pattern">
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            
+        </div>
+    </div>
+</div>
+
+
 <div class="general_pattern">
     <div class="row">
             <div class="col-lg-8 col-12">
@@ -30,6 +54,12 @@
             <div class="col-lg-4 col-12">
                 <div class="set_pattern"></div>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-right">
+            <button class="export" type="submit">Exportez votre fichier</button>
         </div>
     </div>
 </div>

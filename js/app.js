@@ -15,7 +15,6 @@ jQuery(document).ready(function($) {
     // End of blue print in etabli.php
 
 
-
     $( "#square_button" ).click(function() { // Dès que l'on clique sur le bouton carré les paramètres de celui ci apparaisent.
         $('.square_size').toggleClass('show'); // On rajoute une class a notre class pour pouvoir la masquer ou l'ajouter.
     });
@@ -72,10 +71,7 @@ let hauteurenmm = parseFloat(newHeight * cookiehauteur / 40).toPrecision(6);
 $(largeursetting).html("Largeur de votre géometrie: " + largeurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
 $(hauteursetting).html("Hauteur de votre géometrie: " + hauteurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
 });
-
     }
   })
-
-
 }) // End of document.ready (JQuery)
  

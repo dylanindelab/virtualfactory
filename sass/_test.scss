@@ -1,9 +1,12 @@
+// Variable css
 $thick :4px;
 $color : #02074D;
 $bk : #FF1261;
 $ease : cubic-bezier(.5,0,0,1);
 $unit : 30px;
+// end of variable css
 
+// Menu icon style
 .icons {
     cursor: pointer;
     position: absolute;
@@ -24,12 +27,15 @@ $unit : 30px;
     max-width: 60px;
     max-height: 60px;
     margin: 0 calc(#{$unit} / 2);
+
     
     span {
       background: $color;
       position: absolute;
     }
   }
+
+// End of menu icon style
   
 // menu icon
 .-menu {
@@ -95,7 +101,10 @@ $unit : 30px;
       }
     }
     
-  }  
+  } 
+// End of menu icon
+
+// Général Bloc
 
 .draw_pattern {
     height: 500px;
@@ -113,6 +122,9 @@ $unit : 30px;
     transform: translate(0%, -70%);
 }
 
+// End of général bloc
+
+// Animation of entry (select shape)
 @-webkit-keyframes fadeIn {
     from { opacity: 0; margin-top: -10%; }
       to { opacity: 1; margin-top: 10%; }
@@ -121,12 +133,13 @@ $unit : 30px;
     from { opacity: 0; margin-top: -10%; }
       to { opacity: 1; margin-top: 10%; }
 }
+// End of animation
 
-
+// Select shape style 
 .select_shape {
     width: 100%;
     height: 150px;
-    border: 1px solid green;
+    border: 1px solid rgb(0, 0, 0);
     position: relative;
     margin-top: 10%;
     display: none;
@@ -136,7 +149,59 @@ $unit : 30px;
         -webkit-animation: fadeIn 2s;
         animation: fadeIn 2s;
     }
+
+    .shape {
+      height: 150px;
+      display: flex;
+        .square_shape, .circle_shape, .triangle_shape, .draw_shape{
+          width: 40%;
+          left: 50%;
+          position: relative;
+          transform: translate(-50%);
+            &:hover {
+            width: 45%;
+          }
+        }
+      }
 }
+
+// End of select shape style
+
+// Setting pattern 
+
+@-webkit-keyframes fadeInSetting {
+  from { opacity: 0; margin-top: -10%; }
+    to { opacity: 1; margin-top: 5%; }
+}
+@keyframes fadeInSetting {
+  from { opacity: 0; margin-top: -10%; }
+    to { opacity: 1; margin-top: 5%; }
+}
+.setting_pattern {
+  width: 100%;
+  height: auto;
+  border: 1px solid purple;
+  margin-top: 25px;
+  display: none;
+    &.active {
+      display: flex;
+      -webkit-animation: fadeIn 2s;
+      animation: fadeInSetting 2s;
+    }
+
+    .text-center {
+      font-size: 1.2em;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      left: auto;
+      right: auto;
+    }
+}
+// End of setting pattern
+
+
+
 
 
 
