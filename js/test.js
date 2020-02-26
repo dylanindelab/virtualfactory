@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
       });
 
     $('.shape').on('click', function(){
-      $('.setting_pattern').addClass('active');
+      $('.setting_pattern').toggleClass('active');
     })
 
     $('.square_shape').on('click', function(){
