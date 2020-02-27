@@ -7,9 +7,9 @@
 </head>
 <body>
 
-<div class='loader_screen' id='loader'>
+<!-- <div class='loader_screen' id='loader'>
     <div class="loader"></div>*
-</div>
+</div> -->
 
 <div class="container">
 
