@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
 
+
+
+  removeLoader();
   
   /* Ajout d'une variable pour l'écran bleu (inspiré sur maker.js.org), cette variable peut prendre en compte plusieurs
      paramètres, pour voir la liste des paramètre rendez vous sur la documentation */
@@ -13,6 +16,7 @@ jQuery(document).ready(function($) {
     var canvasEl = document.getElementById('myCanvas');
     let canvas = new fabric.Canvas('myCanvas');
     canvas.setDimensions({width:750, height:500}); // Je prévois des dimension par defaut a mon cavnas
+    let canvasGrid = 50;
 
 
 
@@ -44,6 +48,7 @@ jQuery(document).ready(function($) {
       })
     })
 
+
     $('.circle_shape').on('click', function(){
       alert('Vous avais cliquez sur la cercle');
     })
@@ -56,6 +61,5 @@ jQuery(document).ready(function($) {
       alert('Vous avais cliquez sur le dessin libre');
     })
 
-    
-    /* Fin du dernier commentaire */
- }); /* Fin du document JQuery */
+
+ }); 

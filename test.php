@@ -6,7 +6,11 @@
     <title>Etabli 0.2</title>
 </head>
 <body>
-    
+
+<div class='loader_screen' id='loader'>
+    <div class="loader"></div>*
+</div>
+
 <div class="container">
 
 <div class="icons"> 
@@ -68,7 +72,10 @@
                 </canvas>
             </div>
             <div class="col-lg-4 col-12">
-                <div class="set_pattern"></div>
+                <div class="set_pattern">
+                    <p>Largeur(mm) : </p>
+                    <p>Hauteur(mm): </p>
+                </div>
             </div>
         </div>
     </div>
@@ -90,6 +97,7 @@
 <script src="js/fabric.min.js"></script>
 <script src='js/test.js'></script>
 <link rel='stylesheet' href='css/app.min.css'>
+
 
 </body>
 </html>
