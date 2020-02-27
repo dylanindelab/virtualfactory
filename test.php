@@ -53,7 +53,7 @@
                     <small id="emailHelp" class="form-text text-muted">Votre hauteur doit être au minimum de 40mm.</small>
                 </div>
   
-                <button type="submit" class="btn btn-primary">Valider</button>
+                <button  class='submitshape' type="button">Valider</button>
             </form>
         </div>
     </div>

@@ -15,17 +15,6 @@ jQuery(document).ready(function($) {
     canvas.setDimensions({width:750, height:500}); // Je prévois des dimension par defaut a mon cavnas
 
 
-    var rect = new fabric.Rect({
-      left: 100,
-      top: 100,
-      fill: 'red',
-      width: 20,
-      height: 20,
-      angle: 45
-    });
-
-    
-    canvas.add(rect);
 
     
     /* Dès que l'on click sur l'icon menu, on ajoute une class .active a la class .icon, ce qui permettera d'activer l'animation */
@@ -41,7 +30,18 @@ jQuery(document).ready(function($) {
     })
 
     $('.square_shape').on('click', function(){
-      alert('Vous avais cliquez sur la carré');
+      $('.submitshape').on('click', function(){
+        var rect = new fabric.Rect({
+          left: 100,
+          top: 100,
+          fill: 'red',
+          width: 30,  // Les dimension par default sont de 30px par 30px (relative)
+          height: 30, // Les dimension par default sont de 30px par 30px (relative)
+          angle: 45
+        });
+
+        canvas.add(rect);
+      })
     })
 
     $('.circle_shape').on('click', function(){
