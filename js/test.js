@@ -1,9 +1,5 @@
 jQuery(document).ready(function($) {
 
-
-
-  removeLoader();
-  
   /* Ajout d'une variable pour l'écran bleu (inspiré sur maker.js.org), cette variable peut prendre en compte plusieurs
      paramètres, pour voir la liste des paramètre rendez vous sur la documentation */
     let blueprint = new svgBlueprint.Blueprint({ 
@@ -45,6 +41,15 @@ jQuery(document).ready(function($) {
         });
 
         canvas.add(rect);
+
+        rect.on('scaling',function(){
+          let widthscale = parseInt(this.getScaledWidth())
+          let heightscale = parseInt(this.getScaledHeight())
+          
+          console.log("Largeur de : " + widthscale);
+          console.log("Hauteur de : " + heightscale);
+         })
+    
       })
     })
 
