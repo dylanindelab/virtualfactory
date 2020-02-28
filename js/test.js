@@ -46,8 +46,8 @@ jQuery(document).ready(function($) {
           let widthscale = parseInt(this.getScaledWidth())
           let heightscale = parseInt(this.getScaledHeight())
           
-          console.log("Largeur de : " + widthscale);
-          console.log("Hauteur de : " + heightscale);
+          // console.log("Largeur de : " + widthscale);
+          // console.log("Hauteur de : " + heightscale);
 
           let htrinput = $("#hauteurinput").val(); // On récupere la valeur taper dans le input hauteur. Brut en milimetre et non relatif (ce qui et afficher a l'écran)
           let lrginput = $("#largeurinput").val();
@@ -58,11 +58,11 @@ jQuery(document).ready(function($) {
           let cookielargeur = localStorage.getItem("largeur"); // Récupère la donnée local pour la largeur.
           let cookiehauteur = localStorage.getItem("hauteur"); // Récupère la donnée local pour la hauteur
 
-          let largeursetting = document.getElementById("lrg_setting");
-          let hauteursetting = document.getElementById("htr_setting");
+          let largeursetting = document.getElementById("lrg_setting"); // On récupère les champs d'affichage
+          let hauteursetting = document.getElementById("htr_setting"); // On récupère les champs d'affichage
 
-          let largeurenmm = parseFloat(widthscale * cookielargeur / 40).toPrecision(6);
-          let hauteurenmm = parseFloat(heightscale * cookiehauteur / 40).toPrecision(6);
+          let largeurenmm = parseFloat(widthscale * cookielargeur / 40).toPrecision(6); // On calcule la conversion PX -> MM
+          let hauteurenmm = parseFloat(heightscale * cookiehauteur / 40).toPrecision(6); // On calcule la coinverion PX -> MM 
 
           $(largeursetting).html("Largeur de votre géometrie: " + largeurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
           $(hauteursetting).html("Hauteur de votre géometrie: " + hauteurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.         
