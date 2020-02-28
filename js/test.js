@@ -35,8 +35,8 @@ jQuery(document).ready(function($) {
           left: 100,
           top: 100,
           fill: 'red',
-          width: 30,  // Les dimension par default sont de 30px par 30px (relative)
-          height: 30, // Les dimension par default sont de 30px par 30px (relative)
+          width: 40,  // Les dimension par default sont de 30px par 30px (relative)
+          height: 40, // Les dimension par default sont de 30px par 30px (relative)
           angle: 45
         });
 
@@ -48,6 +48,24 @@ jQuery(document).ready(function($) {
           
           console.log("Largeur de : " + widthscale);
           console.log("Hauteur de : " + heightscale);
+
+          let htrinput = $("#hauteurinput").val(); // On récupere la valeur taper dans le input hauteur. Brut en milimetre et non relatif (ce qui et afficher a l'écran)
+          let lrginput = $("#largeurinput").val();
+
+          localStorage.setItem("largeur", lrginput); // Stocke en données local chez le client la largeur entré par l'utilisateur.
+          localStorage.setItem("hauteur", htrinput); // Stocke en données local chez le client la hauteur entré par l'utilisateur.
+
+          let cookielargeur = localStorage.getItem("largeur"); // Récupère la donnée local pour la largeur.
+          let cookiehauteur = localStorage.getItem("hauteur"); // Récupère la donnée local pour la hauteur
+
+          let largeursetting = document.getElementById("lrg_setting");
+          let hauteursetting = document.getElementById("htr_setting");
+
+          let largeurenmm = parseFloat(widthscale * cookielargeur / 40).toPrecision(6);
+          let hauteurenmm = parseFloat(heightscale * cookiehauteur / 40).toPrecision(6);
+
+          $(largeursetting).html("Largeur de votre géometrie: " + largeurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
+          $(hauteursetting).html("Hauteur de votre géometrie: " + hauteurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.         
          })
     
       })

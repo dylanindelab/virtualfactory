@@ -47,13 +47,13 @@
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Largeur :</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="largeurinput" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text text-muted">Votre largeur doit être au minimum de 40mm.</small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Hauteur :</label>
-                    <input type="number" class="form-control" id="exampleInputPassword1">
+                    <input type="text" class="form-control" id="hauteurinput">
                     <small id="emailHelp" class="form-text text-muted">Votre hauteur doit être au minimum de 40mm.</small>
                 </div>
   
@@ -73,8 +73,8 @@
             </div>
             <div class="col-lg-4 col-12">
                 <div class="set_pattern">
-                    <p>Largeur(mm) : </p>
-                    <p>Hauteur(mm): </p>
+                    <p id="lrg_setting"></p>
+                    <p id="htr_setting"></p>
                 </div>
             </div>
         </div>
