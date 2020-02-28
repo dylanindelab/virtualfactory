@@ -76,6 +76,7 @@
                 <div class="set_pattern">
                     <p id="lrg_setting"></p>
                     <p id="htr_setting"></p>
+                    <p id="surface_setting"></p>
                 </div>
             </div>
         </div>

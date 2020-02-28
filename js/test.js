@@ -60,12 +60,15 @@ jQuery(document).ready(function($) {
 
           let largeursetting = document.getElementById("lrg_setting"); // On récupère les champs d'affichage
           let hauteursetting = document.getElementById("htr_setting"); // On récupère les champs d'affichage
+          let surfacesetting = document.getElementById("surface_setting") // On récupère les champs d'affihage
 
           let largeurenmm = parseFloat(widthscale * cookielargeur / 40).toPrecision(6); // On calcule la conversion PX -> MM
           let hauteurenmm = parseFloat(heightscale * cookiehauteur / 40).toPrecision(6); // On calcule la coinverion PX -> MM 
+          let surfaceenmm = parseFloat(widthscale * heightscale).toPrecision(6);
 
           $(largeursetting).html("Largeur de votre géometrie: " + largeurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.
           $(hauteursetting).html("Hauteur de votre géometrie: " + hauteurenmm + 'mm'); // Ajoute dans mon html les données stocké en local.         
+          $(surfacesetting).html("Surface de votre géometrie: " + surfaceenmm + 'mm'); // Ajoute dans mon html les données stocké en local.         
          })
     
       })
