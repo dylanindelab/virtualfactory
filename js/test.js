@@ -35,8 +35,8 @@ jQuery(document).ready(function($) {
           left: 100,
           top: 100,
           fill: 'red',
-          width: 40,  // Les dimension par default sont de 30px par 30px (relative)
-          height: 40, // Les dimension par default sont de 30px par 30px (relative)
+          width: 10,  // Les dimension par default sont de 30px par 30px (relative)
+          height: 10, // Les dimension par default sont de 30px par 30px (relative)
           angle: 45
         });
 
@@ -46,8 +46,8 @@ jQuery(document).ready(function($) {
           let widthscale = parseInt(this.getScaledWidth())
           let heightscale = parseInt(this.getScaledHeight())
           
-          // console.log("Largeur de : " + widthscale);
-          // console.log("Hauteur de : " + heightscale);
+          console.log("Largeur de : " + widthscale);
+          console.log("Hauteur de : " + heightscale);
 
           let htrinput = $("#hauteurinput").val(); // On récupere la valeur taper dans le input hauteur. Brut en milimetre et non relatif (ce qui et afficher a l'écran)
           let lrginput = $("#largeurinput").val();
