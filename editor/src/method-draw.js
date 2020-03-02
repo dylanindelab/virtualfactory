@@ -303,10 +303,10 @@
             .toggleClass('prompt',(type=='prompt'));
           btn_holder.empty();
           
-          var ok = $('<input type="button" value="OK">').appendTo(btn_holder);
+          var ok = $('<input type="button" value="Oui">').appendTo(btn_holder);
         
           if(type != 'alert') {
-            $('<input type="button" value="Cancel">')
+            $('<input type="button" value="Annuler">')
               .appendTo(btn_holder)
               .on("click touchstart", function() { box.hide();callback(false)});
           }
@@ -2216,7 +2216,7 @@
       
       var clickClear = function(){
         var dims = curConfig.dimensions;
-        $.confirm("<strong>Do you want to clear the drawing?</strong>\nThis will also erase your undo history", function(ok) {
+        $.confirm("<strong>Etes vous sur de créer un nouveau fichier ?</strong>\nIl sera effacer definitivement", function(ok) {
           if(!ok) return;
           setSelectMode();
           svgCanvas.deleteSelectedElements();
