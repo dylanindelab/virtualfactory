@@ -21,7 +21,7 @@
         <a class="nav-link" href="#">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="etabli.php">Établi</a>
+        <a class="nav-link" href="editor/index.html">Établi</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">A propos</a>
