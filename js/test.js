@@ -85,7 +85,17 @@ jQuery(document).ready(function($) {
 
 
     $('.circle_shape').on('click', function(){
-      alert('Vous avais cliquez sur la cercle');
+      $('.submitshape').on('click', function(){
+        var circle = new fabric.Circle({
+          radius: 65,
+          fill: 'transparent',
+          left: 0,
+          stroke: 'red',
+          strokeWidth: 3
+        });
+
+        canvas.add(circle);
+      })
     })
 
 
@@ -108,7 +118,7 @@ jQuery(document).ready(function($) {
 
 
 
-    
+
 
 
  }); 

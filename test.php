@@ -55,9 +55,7 @@
                     <label for="exampleInputPassword1">Hauteur :</label>
                     <input type="text" class="form-control" id="hauteurinput">
                     <small id="emailHelp" class="form-text text-muted">Votre hauteur doit être au minimum de 40mm.</small>
-                </div>
-  
-                
+                </div>               
             </form>
             <button  class='submitshape' type="button">Valider</button>
         </div>
